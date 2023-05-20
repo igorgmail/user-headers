@@ -4,30 +4,25 @@ const require = createRequire(import.meta.url);
 
 const logger = require('morgan')
 const express = require('express');
-const fetch = require('node-fetch')
-import { HeaderGenerator } from "header-generator";
-const randomUseragent = require('random-useragent');
+
+const requestIp = require('request-ip');
 
 const app = express();
 
 app.use(logger('dev'));
 app.use(express.urlencoded({ extended: true }));
-
-const userRandom = randomUseragent.getRandomData(); // gets a random user agent string
-
-const head = new HeaderGenerator()
-const newHeaders = head.getHeaders();
-
+app.use(requestIp.mw());
 
 app.get('/', (req, res) => {
   // Получение данных о пользователе
-  const { headers, query, params, body, ip, cookies } = req;
+  const { headers, query, params, body, cookie } = req;
+  const ip = req.clientIp; // IP-адрес клиента
   const port = req.connection.remotePort
   const ips = req.ips
 
   console.log(req);
   // Отправка данных о пользователе в ответ
-  res.json({ headers, query, params, body, ip, cookies, port, ips });
+  res.json({ headers, query, params, body, ip, cookie, port, ips });
 });
 
 // Запуск сервера на порту 3000

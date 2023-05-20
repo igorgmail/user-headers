@@ -20,10 +20,6 @@
   "dependencies": {
     "cookie-parser": "^1.4.6",
     "express": "^4.18.2",
-    "header-generator": "^2.1.27",
-    "http-proxy-agent": "^6.0.1",
-    "https-proxy-agent": "^6.1.0",
-    "node-fetch": "^2.6.11",
-    "random-useragent": "^0.5.0"
+    "request-ip": "^3.3.0"
   }
 }
