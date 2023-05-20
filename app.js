@@ -13,7 +13,7 @@ app.use(logger('dev'));
 app.use(express.urlencoded({ extended: true }));
 app.use(requestIp.mw());
 
-app.get('/', (req, res) => {
+app.get('/head', (req, res) => {
   // Получение данных о пользователе
   const { headers, query, params, body, cookie } = req;
   const ip = req.clientIp; // IP-адрес клиента
