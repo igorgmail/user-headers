@@ -20,7 +20,7 @@ app.get('/head', (req, res) => {
   const port = req.connection.remotePort
   const ips = req.ips
 
-  console.log(req);
+  console.log(`Request from ip: ${ip}`);
   // Отправка данных о пользователе в ответ
   res.json({ headers, query, params, body, ip, cookie, port, ips });
 });
