@@ -1,6 +1,8 @@
 import { createRequire } from "module";
 const require = createRequire(import.meta.url);
 
+// const carsRoter = require('./carsRouter')
+import carsRoter from './carsRouter.js'
 
 const logger = require('morgan')
 const express = require('express');
@@ -25,7 +27,10 @@ app.get('/head', (req, res) => {
   res.json({ headers, query, params, body, ip, cookie, port, ips });
 });
 
+app.use('/cars', carsRoter)
+
+
 // Запуск сервера на порту 3000
-app.listen(3000, () => {
-  console.log('Сервер запущен на порту 3000');
+app.listen(3002, () => {
+  console.log('Сервер запущен на порту 3002');
 });
