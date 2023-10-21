@@ -6,7 +6,7 @@ const require = createRequire(import.meta.url);
 const router = require('express').Router();
 
 router.get('/', (req, res) => {
-  res.json(carsData)
+  res.json(carsData).end()
 });
 
 export default router;
