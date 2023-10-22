@@ -3,13 +3,14 @@ const require = createRequire(import.meta.url);
 
 // const carsRoter = require('./carsRouter')
 import carsRoter from './carsRouter.js'
-
+const cors = require('cors')
 const logger = require('morgan')
 const express = require('express');
 
 const requestIp = require('request-ip');
 
 const app = express();
+app.use(cors())
 
 app.use(logger('dev'));
 app.use(express.urlencoded({ extended: true }));
