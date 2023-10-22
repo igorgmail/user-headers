@@ -19,10 +19,10 @@ const carData = {
       lat: "54.8936466",
       lng: "27.5305566",
       angle: "243",
-      altitude: "205",
+      altitude: Math.floor(Math.random() * 360),
       speed: "27",
       pic: "http://89.108.99.163/pics/car2.png",
-      last_track: "2023-10-15 15:42:05"
+      last_track: Date.now()
     },
     {
       car_id: 33,
@@ -33,7 +33,7 @@ const carData = {
       altitude: "165",
       speed: "48",
       pic: "http://89.108.99.163/pics/car3.png",
-      last_track: "2023-10-01 09:42:05"
+      last_track: Date.now()
     }
   ]
 }
