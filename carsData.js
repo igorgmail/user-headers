@@ -1,4 +1,5 @@
-const carData = {
+function getCarsData() {
+  return {
   company_name: "Компания АБС",
   company_id: 1,
   cars: [
@@ -22,7 +23,7 @@ const carData = {
       altitude: Math.floor(Math.random() * 360),
       speed: "27",
       pic: "http://89.108.99.163/pics/car2.png",
-      last_track: Date.now()
+      last_track: new Date()
     },
     {
       car_id: 33,
@@ -33,9 +34,11 @@ const carData = {
       altitude: "165",
       speed: "48",
       pic: "http://89.108.99.163/pics/car3.png",
-      last_track: Date.now()
+      last_track: new Date()
     }
   ]
 }
+}
 
-export default carData
+
+export default getCarsData
