@@ -32,6 +32,6 @@ app.use('/cars', carsRoter)
 
 
 // Запуск сервера на порту 3000
-app.listen(3000, () => {
+app.listen(3002, () => {
   console.log('Сервер запущен на порту 3002');
 });
