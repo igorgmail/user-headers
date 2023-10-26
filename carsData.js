@@ -11,7 +11,7 @@ function getCarsData() {
   cars: [
     {
       car_id: 1,
-      name: "VW Passat",
+      car_name: "VW Passat",
       lat: "53.943055",
       lng: "27.4350899",
       angle: "218",
@@ -22,7 +22,7 @@ function getCarsData() {
     },
     {
       car_id: 2,
-      name: "Renault Master",
+      car_name: "Renault Master",
       lat: "54.8936466",
       lng: "27.5305566",
       angle: Math.floor(Math.random() * 360),
@@ -33,7 +33,7 @@ function getCarsData() {
     },
     {
       car_id: 33,
-      name: "Ларгус Иванов",
+      car_name: "Ларгус Иванов",
       lat: "54.2314030446825",
       lng: "28.795824667646446",
       angle: "28",
