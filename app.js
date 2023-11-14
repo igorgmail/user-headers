@@ -3,6 +3,7 @@ const require = createRequire(import.meta.url);
 
 // const carsRoter = require('./carsRouter')
 import carsRoter from './carsRouter.js'
+import historyRouter from './historyRoter.js'
 const cors = require('cors')
 const logger = require('morgan')
 const express = require('express');
@@ -29,6 +30,7 @@ app.get('/head', (req, res) => {
 });
 
 app.use('/cars', carsRoter)
+app.use('/history', historyRouter)
 
 
 // Запуск сервера на порту 3000
